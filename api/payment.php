@@ -42,7 +42,7 @@ if (isset($_POST['token'])) {
         // Too many requests made to the API too quickly
         log_echo($e, false);
         http_response_code(500);
-        echo 'A "RateLimit" error occurred.';
+        echo 'A "rate limit" error occurred.';
         die();
         
     } catch (\Stripe\Error\InvalidRequest $e) {
